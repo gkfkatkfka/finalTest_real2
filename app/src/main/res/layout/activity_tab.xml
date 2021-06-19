@@ -11,8 +11,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
-        app:tabIndicatorColor="@color/black"
+        app:tabIndicatorColor="#f7797d"
         app:tabSelectedTextColor="@color/cardview_dark_background"
+        app:tabIconTint="#C16A6A"
         >
 
         <com.google.android.material.tabs.TabItem
