@@ -18,9 +18,11 @@ public class VPAdapter extends FragmentPagerAdapter {
         items.add(new FragmentMap());
         items.add(new InfoFragment());
 
+
         itext.add("검색");
         itext.add("지도");
         itext.add("내 정보");
+
     }
     @Override
     public CharSequence getPageTitle(int position) {

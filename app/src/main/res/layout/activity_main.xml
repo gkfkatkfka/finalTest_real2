@@ -4,42 +4,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_gra"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/btnLogin"
-        android:layout_width="0dp"
-        android:layout_height="45dp"
-        android:layout_marginEnd="49dp"
-        android:layout_marginBottom="288dp"
-        android:text="로그인"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <TextView
+        android:id="@+id/appName2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="188dp"
+        android:layout_marginBottom="196dp"
+        android:fontFamily="@font/cafe24ssurroundair"
+        android:text="파인드북"
+        android:textColor="#655a3e"
+        android:textSize="70dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayout3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnJoin"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout4" />
-
-    <Button
-        android:id="@+id/btnJoin"
-        android:layout_width="0dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="42dp"
-        android:layout_marginEnd="40dp"
-        android:text="회원가입"
-        app:layout_constraintBaseline_toBaselineOf="@+id/btnLogin"
-        app:layout_constraintEnd_toStartOf="@+id/btnLogin"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout3"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="210dp"
-        android:layout_marginBottom="22dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginBottom="8dp"
+        app:boxBackgroundColor="#FFFFFF"
+        app:boxStrokeColor="#B58772"
+        app:boxStrokeErrorColor="#f7797d"
+        app:boxStrokeWidth="2dp"
+        app:errorTextColor="#9f3f42"
+        app:hintTextColor="#473F3B"
         app:layout_constraintBottom_toTopOf="@+id/textInputLayout4"
-        app:layout_constraintEnd_toEndOf="@+id/textInputLayout4"
-        app:layout_constraintStart_toStartOf="@+id/textInputLayout4"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appName2">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/loginID"
@@ -54,10 +55,18 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="44dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginBottom="16dp"
+        app:boxBackgroundColor="#FFFFFF"
+        app:boxStrokeColor="#B58772"
+        app:boxStrokeWidth="2dp"
+        app:hintTextColor="#473F3B"
+        app:boxStrokeErrorColor="#f7797d"
+        app:errorTextColor="#9f3f42"
         app:layout_constraintBottom_toTopOf="@+id/btnLogin"
-        app:layout_constraintEnd_toEndOf="@+id/btnLogin"
-        app:layout_constraintStart_toStartOf="@+id/btnJoin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout3"
         app:passwordToggleEnabled="true">
 
@@ -68,5 +77,37 @@
             android:hint="비밀번호"
             android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginBottom="8dp"
+        android:alpha="0.8"
+        android:backgroundTint="#BC8F7B"
+        android:fontFamily="@font/ng_bold"
+        android:text="로그인"
+        android:textColor="#FDF6EF"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtJoin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout4" />
+
+    <TextView
+        android:id="@+id/txtJoin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="56dp"
+        android:fontFamily="@font/ng_bold"
+        android:text="회원가입"
+        android:textColor="#A88D64"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

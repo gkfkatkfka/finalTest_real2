@@ -1,12 +1,9 @@
 plugins {
     id 'com.android.application'
-
-    //파이어베이스
-    id 'com.google.gms.google-services'
 }
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 28
     buildToolsVersion "30.0.3"
 
     defaultConfig {
@@ -46,14 +43,11 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
-    // 파이어베이스
-    implementation 'com.google.firebase:firebase-bom:28.1.0'
-    implementation 'com.google.firebase:firebase-database:19.5.1'
-
     // hj
     implementation 'com.google.android.material:material:1.4.0-alpha02'
     implementation 'com.google.android.gms:play-services-maps:17.0.1' // map
     implementation 'com.google.android.gms:play-services-location:18.0.0' // map 위해 추가
     implementation 'androidx.recyclerview:recyclerview:1.0.0' // recyclerview
     implementation 'com.squareup.picasso:picasso:2.71828' // image
+
 }

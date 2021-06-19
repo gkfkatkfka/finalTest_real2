@@ -16,6 +16,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
@@ -24,7 +25,9 @@ import com.google.android.material.textfield.TextInputLayout;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     // 버튼 정의
     private Button btnLogin;
-    private Button btnJoin;
+
+    // 회원가입 텍스트 정의
+    private TextView txtJoin;
 
     // txt 정의
     private TextInputEditText loginID;
@@ -48,7 +51,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         // 버튼 연결
         btnLogin = (Button) findViewById(R.id.btnLogin);
-        btnJoin = (Button) findViewById(R.id.btnJoin);
 
         // 텍스트 연결
         loginID = (TextInputEditText) findViewById(R.id.loginID);
@@ -58,15 +60,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         inputEmail = (TextInputLayout) findViewById(R.id.textInputLayout3);
         inputPW = (TextInputLayout) findViewById(R.id.textInputLayout4);
 
+        txtJoin=(TextView)findViewById(R.id.txtJoin);
+
         // 이벤트 핸들러 작성
         btnLogin.setOnClickListener(this);
-        btnJoin.setOnClickListener(this);
+        txtJoin.setOnClickListener(this);
 
         /*DB 관련*/
         // 디비 생성
         try {
             myDB=this.openOrCreateDatabase(DBNAME,MODE_PRIVATE,null);
-            Toast.makeText(this,"데이터베이스 생성", Toast.LENGTH_LONG).show();
+           //Toast.makeText(this,"데이터베이스 생성", Toast.LENGTH_LONG).show();
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -78,7 +82,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         email = loginID.getText().toString();
         pw = loginPW.getText().toString();
 
-        if (v == btnJoin) { // join 화면
+        if (v == txtJoin) { // join 화면
             Intent joinIntent = new Intent(MainActivity.this, JoinActivity.class);
             startActivity(joinIntent);
         } else if (v == btnLogin) { // login 화면
