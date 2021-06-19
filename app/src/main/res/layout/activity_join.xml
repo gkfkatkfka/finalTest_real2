@@ -4,17 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_gra"
     tools:context=".JoinActivity">
 
-    <Button
-        android:id="@+id/btnJoinBefore"
+    <TextView
+        android:id="@+id/appName2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="23dp"
-        android:text="←"
+        android:layout_marginTop="85dp"
+        android:layout_marginBottom="88dp"
+        android:fontFamily="@font/ng_bold"
+        android:text="회원가입"
+        android:textColor="#655a3e"
+        android:textSize="60dp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayout42"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/btnJoinBefore" />
+
+    <ImageButton
+        android:id="@+id/btnJoinBefore"
+        android:layout_width="40dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="17dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/appName2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back"
+        app:tint="#655a3e" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout42"
@@ -22,11 +43,17 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
+        android:layout_marginTop="270dp"
         android:layout_marginEnd="60dp"
-        android:layout_marginBottom="39dp"
-        app:layout_constraintBottom_toTopOf="@+id/textInputLayout39"
+        app:boxBackgroundColor="#FFFFFF"
+        app:boxStrokeColor="#B58772"
+        app:boxStrokeErrorColor="#f7797d"
+        app:boxStrokeWidth="2dp"
+        app:errorTextColor="#9f3f42"
+        app:hintTextColor="#473F3B"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/joinEmail"
@@ -41,13 +68,19 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
-        android:layout_marginTop="240dp"
+        android:layout_marginTop="29dp"
         android:layout_marginEnd="60dp"
+        app:boxBackgroundColor="#FFFFFF"
+        app:boxStrokeColor="#B58772"
+        app:boxStrokeErrorColor="#f7797d"
+        app:boxStrokeWidth="2dp"
         app:counterEnabled="true"
         app:counterMaxLength="20"
+        app:errorTextColor="#9f3f42"
+        app:hintTextColor="#473F3B"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout42">
 
         <com.google.android.material.textfield.TextInputEditText
 
@@ -64,8 +97,14 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="60dp"
+        app:boxBackgroundColor="#FFFFFF"
+        app:boxStrokeColor="#B58772"
+        app:boxStrokeErrorColor="#f7797d"
+        app:boxStrokeWidth="2dp"
+        app:errorTextColor="#9f3f42"
+        app:hintTextColor="#473F3B"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout39">
@@ -85,8 +124,14 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
-        android:layout_marginTop="39dp"
+        android:layout_marginTop="29dp"
         android:layout_marginEnd="60dp"
+        app:boxBackgroundColor="#FFFFFF"
+        app:boxStrokeColor="#B58772"
+        app:boxStrokeErrorColor="#f7797d"
+        app:boxStrokeWidth="2dp"
+        app:errorTextColor="#9f3f42"
+        app:hintTextColor="#473F3B"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout40">
@@ -104,9 +149,14 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="60dp"
+        android:alpha="0.8"
+        android:backgroundTint="#BC8F7B"
+        android:fontFamily="@font/ng_bold"
         android:text="회원가입"
+        android:textColor="#FDF6EF"
+        android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout41" />

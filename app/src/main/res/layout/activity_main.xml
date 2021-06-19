@@ -88,9 +88,10 @@
         android:alpha="0.8"
         android:backgroundTint="#BC8F7B"
         android:fontFamily="@font/ng_bold"
-        android:text="로그인"
         android:textColor="#FDF6EF"
         android:textSize="18dp"
+        android:text="로그인"
+
         app:layout_constraintBottom_toTopOf="@+id/txtJoin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
