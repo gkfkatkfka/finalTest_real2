@@ -6,11 +6,13 @@ import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
+import android.widget.Button;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.material.textfield.TextInputEditText;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -89,7 +91,9 @@ public class FragmentBook extends Fragment {
         //생성
         new BookThread().execute();
 
-        EditText edtsearch= rootView.findViewById(R.id.edtsearch);
+        TextInputEditText edtsearch= rootView.findViewById(R.id.testBook);
+
+
 
         edtsearch.setOnKeyListener(new View.OnKeyListener() {
             @Override

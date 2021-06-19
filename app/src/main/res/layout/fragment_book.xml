@@ -6,30 +6,43 @@
     android:layout_height="match_parent"
     tools:context=".FragmentBook">
 
-    <EditText
-        android:id="@+id/edtsearch"
-        android:layout_width="235dp"
-        android:layout_height="49dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="179dp"
-        tools:layout_editor_absoluteY="29dp" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutTest"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+        android:layout_width="377dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="16dp"
+        app:boxStrokeColor="#f7797d"
+        app:boxBackgroundColor="#FADFA4"
+        app:hintTextColor="#302A2A"
+        app:layout_constraintBottom_toTopOf="@+id/list"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/ng_bold"
-        android:text="도서 검색 :"
-        android:textSize="30dp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="47dp" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/testBook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:hint="도서 검색"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/list"
-        android:layout_width="408dp"
-        android:layout_height="619dp"
-        tools:layout_editor_absoluteX="2dp"
-        tools:layout_editor_absoluteY="108dp" />
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutTest" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
