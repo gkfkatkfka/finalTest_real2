@@ -38,10 +38,6 @@ public class TabActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String myData = intent.getStringExtra("email");
 
-        Bundle bundle = new Bundle();
-        bundle.putString("email", myData );
-        Fragment fragment = new Fragment();
-        fragment.setArguments(bundle);
 
     }
 }

@@ -10,12 +10,12 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
 public class UpdateInfoActivity extends AppCompatActivity implements View.OnClickListener{
-
     // 버튼
     private Button btnUpdateBefore;
     private Button btnUpdateInfo;
@@ -46,6 +46,16 @@ public class UpdateInfoActivity extends AppCompatActivity implements View.OnClic
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_info);
+
+        /*DB 관련*/
+        // 디비 생성
+        try {
+            myDB=this.openOrCreateDatabase(DBNAME,MODE_PRIVATE,null);
+            Toast.makeText(this,"데이터베이스 생성", Toast.LENGTH_LONG).show();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
         btnUpdateBefore=(Button)findViewById(R.id.btnUpdateBefore);
         btnUpdateInfo=(Button)findViewById(R.id.btnUpdateInfo);
 
@@ -58,14 +68,13 @@ public class UpdateInfoActivity extends AppCompatActivity implements View.OnClic
         inputName=(TextInputLayout)findViewById(R.id.textInputLayoutName);
 
         // 나중에 수정할 것
-         email="gkfka1@co.kr";
+         email="1@1";
         String beforeName="강하람";
          // 여기도 이름 정보 가지고 올것
         updateName.setText(beforeName);
 
         btnUpdateBefore.setOnClickListener(this);
          btnUpdateInfo.setOnClickListener(this);
-
 
         // 비밀번호와 비밀번호 확인
         updateCheckPW.addTextChangedListener(new TextWatcher() {
@@ -109,7 +118,6 @@ public class UpdateInfoActivity extends AppCompatActivity implements View.OnClic
                 }
             }
         });
-
     }
 
     public void onClick(View v) {

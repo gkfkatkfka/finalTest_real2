@@ -1,6 +1,7 @@
 package com.inhatc.finaltest;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
@@ -29,6 +30,7 @@ public class InfoFragment extends Fragment implements View.OnClickListener{
 
     // 데이터 전달이 안 되어 우선 내가 정의 해둠
     String email;
+    String name;
 
     // DB 연동
     private String DBNAME="user";
@@ -93,7 +95,7 @@ public class InfoFragment extends Fragment implements View.OnClickListener{
         btnLogout.setOnClickListener(this);
 
         // 액티비티에서 값 넘어오면 여기 수정
-        email = "gkfka1@co.kr";
+        email = "1@1";
 
         /*DB 관련*/
         // 디비 생성
@@ -104,6 +106,15 @@ public class InfoFragment extends Fragment implements View.OnClickListener{
             e.printStackTrace();
         }
 
+        // 이름 설정
+        String nameQuery = "SELECT name FROM " + DBNAME + " where email='" + email + "'";
+        Cursor cursor=myDB.rawQuery(nameQuery,null);
+
+        cursor.moveToFirst();
+        name=cursor.getString(0);
+        cursor.close();
+
+        txtName.setText(name);
         return v;
     }
 
