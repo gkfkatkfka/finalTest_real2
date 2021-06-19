@@ -7,6 +7,7 @@
 package com.inhatc.finaltest;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
 import android.database.Cursor;
@@ -14,6 +15,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
@@ -80,6 +82,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent joinIntent = new Intent(MainActivity.this, JoinActivity.class);
             startActivity(joinIntent);
         } else if (v == btnLogin) { // login 화면
+
 
             check(email, pw);
             if(inputEmail.getError()==null&&inputPW.getError()==null){ // 공백이 없을 경우

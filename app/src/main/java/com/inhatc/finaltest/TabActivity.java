@@ -12,7 +12,9 @@ import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 
-public class TabActivity extends AppCompatActivity {
+public class TabActivity extends AppCompatActivity{
+    String email;
+
     private TextView txt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,8 +38,10 @@ public class TabActivity extends AppCompatActivity {
         }
 
         Intent intent = getIntent();
-        String myData = intent.getStringExtra("email");
+        email = intent.getStringExtra("email");
+    }
+    public String getData(){
 
-
+        return email;
     }
 }

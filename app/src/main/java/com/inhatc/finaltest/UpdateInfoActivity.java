@@ -3,6 +3,7 @@ package com.inhatc.finaltest;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -67,11 +68,18 @@ public class UpdateInfoActivity extends AppCompatActivity implements View.OnClic
         inputCheckPW=(TextInputLayout)findViewById(R.id.textInputLayoutCheckPW);
         inputName=(TextInputLayout)findViewById(R.id.textInputLayoutName);
 
-        // 나중에 수정할 것
-         email="1@1";
-        String beforeName="강하람";
-         // 여기도 이름 정보 가지고 올것
-        updateName.setText(beforeName);
+        Intent intent = getIntent();
+        email = intent.getStringExtra("email");
+
+
+        // 이름 설정
+        String nameQuery = "SELECT name FROM " + DBNAME + " where email='" + email + "'";
+        Cursor cursor=myDB.rawQuery(nameQuery,null);
+
+        cursor.moveToFirst();
+        name=cursor.getString(0);
+        cursor.close();
+        updateName.setText(name);
 
         btnUpdateBefore.setOnClickListener(this);
          btnUpdateInfo.setOnClickListener(this);
@@ -130,7 +138,7 @@ public class UpdateInfoActivity extends AppCompatActivity implements View.OnClic
             myDB.close();
             Intent tabIntent = new Intent(UpdateInfoActivity.this, TabActivity.class);
             startActivity(tabIntent);
-
+            finish();
         }else if(v==btnUpdateInfo){ // 업데이트 눌렀을 때 변화
             // 체크
             boolean chk=check(name,PW,checkPW);
@@ -139,8 +147,9 @@ public class UpdateInfoActivity extends AppCompatActivity implements View.OnClic
                         "where email = '"+email+"'";
                 myDB.execSQL(updateQuery);
                 myDB.close();
-                Intent tabIntent = new Intent(UpdateInfoActivity.this, TabActivity.class);
-                startActivity(tabIntent);
+                finish();
+                //Intent tabIntent = new Intent(UpdateInfoActivity.this, TabActivity.class);
+                //startActivity(tabIntent);
             }
         }
     }

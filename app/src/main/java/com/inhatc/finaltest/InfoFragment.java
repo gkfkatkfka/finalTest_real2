@@ -69,6 +69,7 @@ public class InfoFragment extends Fragment implements View.OnClickListener{
         return fragment;
     }
 
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -94,9 +95,6 @@ public class InfoFragment extends Fragment implements View.OnClickListener{
         btnUpdate.setOnClickListener(this);
         btnLogout.setOnClickListener(this);
 
-        // 액티비티에서 값 넘어오면 여기 수정
-        email = "1@1";
-
         /*DB 관련*/
         // 디비 생성
         try {
@@ -105,6 +103,13 @@ public class InfoFragment extends Fragment implements View.OnClickListener{
         }catch (Exception e){
             e.printStackTrace();
         }
+
+        // 외부에서 값 가져오기
+        if(getActivity() != null && getActivity() instanceof TabActivity){
+            email = ((TabActivity)getActivity()).getData();
+        }
+        //System.out.println(email);
+        //txtName.setText(email);
 
         // 이름 설정
         String nameQuery = "SELECT name FROM " + DBNAME + " where email='" + email + "'";
@@ -120,8 +125,11 @@ public class InfoFragment extends Fragment implements View.OnClickListener{
 
     public void onClick(View v){
         if(v==btnUpdate){ // 정보 수정할 때
-            Intent loginIntent=new Intent(getActivity(),UpdateInfoActivity.class);
-            startActivity(loginIntent);
+            Intent updateIntent=new Intent(getActivity(),UpdateInfoActivity.class);
+            updateIntent.putExtra("email",email);
+            startActivity(updateIntent);
+            //Intent loginIntent=new Intent(getActivity(),UpdateInfoActivity.class);
+            //startActivity(loginIntent);
             // 여기도 값넘겨주는 거 구현
         }else if(v==btnDelete){ // 회원 탈퇴 할 때
             String deleteQuery = "Delete FROM " + DBNAME + " where email='" + email + "'";
@@ -136,4 +144,6 @@ public class InfoFragment extends Fragment implements View.OnClickListener{
             Toast.makeText(getActivity(),"로그아웃 완료", Toast.LENGTH_LONG).show();
         }
     }
+
+
 }
