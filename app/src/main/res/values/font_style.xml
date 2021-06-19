@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="customTextViewFontStyle" parent="Widget.AppCompat.TextView">
+        <item name="android:fontFamily">@font/font</item>
+    </style>
+
+    <style name="customButtonFontStyle" parent="Widget.AppCompat.Button">
+        <item name="android:fontFamily">@font/font</item>
+    </style>
+
+    <style name="customTextInputLayoutFontStyle" parent="Widget.Design.TextInputLayout">
+        <item name="android:fontFamily">@font/font</item>
+    </style>
+
+    <style name="customTextInputEditTextFontStyle" parent="Widget.MaterialComponents.TimePicker.Display.TextInputEditText">
+        <item name="android:fontFamily">@font/font</item>
+    </style>
+
+    <style name="customTabLayoutFontStyle" parent="Widget.MaterialComponents.TabLayout">
+        <item name="android:fontFamily">@font/font</item>
+    </style>
+
+</resources>
