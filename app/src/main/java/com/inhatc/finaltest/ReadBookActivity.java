@@ -8,7 +8,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 
 import java.util.ArrayList;
@@ -33,7 +32,7 @@ public class ReadBookActivity extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_read_book);
 
-        btnBefore=(ImageButton)findViewById(R.id.btnBefore);
+        btnBefore=(ImageButton)findViewById(R.id.btnBeforeInsert);
         models = new ArrayList<>();
 
         btnBefore.setOnClickListener(this);

@@ -51,12 +51,12 @@
 
             app:layout_constraintBottom_toBottomOf="@+id/viewpager"
             app:layout_constraintEnd_toEndOf="parent"
-            fab:fab_colorNormal="#DA4336"
+            fab:fab_colorNormal="#f7797d"
             fab:fab_colorPressed="#E75043"
             fab:fab_colorRipple="#99FFFFFF"
-            fab:fab_shadowColor="#660000"
+            fab:fab_shadowColor="#f7797d"
             fab:fab_showShadow="true"
-            fab:menu_fab_label="책 후기"
+            fab:menu_fab_label="독서록"
             fab:menu_labels_colorNormal="#333333"
             fab:menu_labels_colorPressed="#444444"
             fab:menu_labels_colorRipple="#66FFFFFF"
@@ -71,16 +71,16 @@
                 android:id="@+id/writeTab"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@android:drawable/ic_menu_edit"
-                fab:fab_label="독서록 쓰기"
+                android:src="@android:drawable/ic_menu_add"
+                fab:fab_label="작성"
                 fab:fab_size="mini" />
 
             <com.github.clans.fab.FloatingActionButton
                 android:id="@+id/readTab"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@android:drawable/ic_menu_add"
-                fab:fab_label="후기 보기"
+                android:src="@android:drawable/ic_menu_sort_by_size"
+                fab:fab_label="목록"
                 fab:fab_size="mini" />
 
 

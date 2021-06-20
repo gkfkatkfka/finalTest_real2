@@ -21,10 +21,10 @@
         app:layout_constraintBottom_toTopOf="@+id/textInputLayout42"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btnBefore" />
+        app:layout_constraintTop_toTopOf="@+id/btnBeforeInsert" />
 
     <ImageButton
-        android:id="@+id/btnBefore"
+        android:id="@+id/btnBeforeInsert"
         android:layout_width="40dp"
         android:layout_height="31dp"
         android:layout_marginStart="16dp"
@@ -154,8 +154,9 @@
         android:alpha="0.8"
         android:backgroundTint="#BC8F7B"
         android:fontFamily="@font/ng_bold"
-        android:text="회원가입"
         android:textColor="#FDF6EF"
+        android:text="회원가입"
+
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -3,6 +3,7 @@ package com.inhatc.finaltest;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -99,7 +100,7 @@ public class InfoFragment extends Fragment implements View.OnClickListener{
         // 디비 생성
         try {
             myDB=getActivity().openOrCreateDatabase(DBNAME,MODE_PRIVATE,null);
-            Toast.makeText(getActivity(),"프래그먼트 데이터베이스 생성", Toast.LENGTH_LONG).show();
+            //Toast.makeText(getActivity(),"프래그먼트 데이터베이스 생성", Toast.LENGTH_LONG).show();
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -137,11 +138,11 @@ public class InfoFragment extends Fragment implements View.OnClickListener{
             myDB.close();
             Intent loginIntent=new Intent(getActivity(),MainActivity.class);
             startActivity(loginIntent);
-            Toast.makeText(getActivity(),email+"회원탈퇴 완료", Toast.LENGTH_LONG).show();
+            Toast.makeText(getActivity(),"회원탈퇴 완료", Toast.LENGTH_LONG).show();
         }else if(v==btnLogout){ // 로그아웃 할 때
             Intent loginIntent=new Intent(getActivity(),MainActivity.class);
             startActivity(loginIntent);
-            Toast.makeText(getActivity(),"로그아웃 완료", Toast.LENGTH_LONG).show();
+            Toast.makeText(getActivity(),"로그아웃", Toast.LENGTH_LONG).show();
         }
     }
 

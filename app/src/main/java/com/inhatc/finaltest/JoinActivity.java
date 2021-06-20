@@ -61,7 +61,7 @@ public class JoinActivity extends AppCompatActivity implements View.OnClickListe
 
 
         /* 버튼 연결*/
-        btnJoinBefore = (ImageButton) findViewById(R.id.btnBefore);
+        btnJoinBefore = (ImageButton) findViewById(R.id.btnBeforeInsert);
         btnResister = (Button) findViewById(R.id.btnResister);
 
 

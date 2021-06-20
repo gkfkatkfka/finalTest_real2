@@ -87,13 +87,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(joinIntent);
         } else if (v == btnLogin) { // login 화면
 
-            email="gkfkatkfka@naver.com";
-            Intent tabIntent = new Intent(MainActivity.this, TabActivity.class);
-            tabIntent.putExtra("email", email);
-            startActivity(tabIntent);
-
-
-/*
             check(email, pw);
             if(inputEmail.getError()==null&&inputPW.getError()==null){ // 공백이 없을 경우
                 int result=login(email,pw);
@@ -102,15 +95,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }else if(result==0){ // 아이디 있는데 비밀번호 잘못 입력
                     Toast.makeText(this,"비밀번호가 틀렸습니다", Toast.LENGTH_LONG).show();
                 }else if(result==1){ // 로그인 잘 되는 경우
-                    Toast.makeText(this,"로그인 성공하였습니다", Toast.LENGTH_LONG).show();
+                    Toast.makeText(this,"로그인", Toast.LENGTH_LONG).show();
                     Intent tabIntent = new Intent(MainActivity.this, TabActivity.class);
                     tabIntent.putExtra("email", email);
                     startActivity(tabIntent);
                     myDB.close();
                 }
             }
-
-*/
         }
     }
 

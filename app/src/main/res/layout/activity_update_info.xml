@@ -6,15 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".UpdateInfoActivity">
 
-    <Button
-        android:id="@+id/btnUpdateBefore"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ImageButton
+        android:id="@+id/btnBeforeUpdate"
+        android:layout_width="40dp"
+        android:layout_height="31dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="56dp"
-        android:text="←"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="17dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/appName2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back"
+        app:tint="#655a3e" />
+
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayoutpw"
@@ -26,6 +31,12 @@
         android:layout_marginEnd="60dp"
         app:counterEnabled="true"
         app:counterMaxLength="20"
+        app:boxBackgroundColor="#FFFFFF"
+        app:boxStrokeColor="#B58772"
+        app:boxStrokeErrorColor="#f7797d"
+        app:boxStrokeWidth="2dp"
+        app:errorTextColor="#9f3f42"
+        app:hintTextColor="#473F3B"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -47,6 +58,12 @@
         android:layout_marginStart="60dp"
         android:layout_marginTop="18dp"
         android:layout_marginEnd="60dp"
+        app:boxBackgroundColor="#FFFFFF"
+        app:boxStrokeColor="#B58772"
+        app:boxStrokeErrorColor="#f7797d"
+        app:boxStrokeWidth="2dp"
+        app:errorTextColor="#9f3f42"
+        app:hintTextColor="#473F3B"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayoutpw">
@@ -68,6 +85,12 @@
         android:layout_marginStart="60dp"
         android:layout_marginTop="39dp"
         android:layout_marginEnd="60dp"
+        app:boxBackgroundColor="#FFFFFF"
+        app:boxStrokeColor="#B58772"
+        app:boxStrokeErrorColor="#f7797d"
+        app:boxStrokeWidth="2dp"
+        app:errorTextColor="#9f3f42"
+        app:hintTextColor="#473F3B"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayoutCheckPW">
@@ -88,6 +111,10 @@
         android:layout_marginEnd="60dp"
         android:layout_marginBottom="150dp"
         android:text="정보수정"
+        android:alpha="0.8"
+        android:backgroundTint="#BC8F7B"
+        android:fontFamily="@font/ng_bold"
+        android:textColor="#FDF6EF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

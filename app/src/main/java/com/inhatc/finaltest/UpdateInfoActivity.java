@@ -11,6 +11,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
@@ -18,7 +19,7 @@ import com.google.android.material.textfield.TextInputLayout;
 
 public class UpdateInfoActivity extends AppCompatActivity implements View.OnClickListener{
     // 버튼
-    private Button btnUpdateBefore;
+    private ImageButton btnUpdateBefore;
     private Button btnUpdateInfo;
 
     // 연결
@@ -57,7 +58,7 @@ public class UpdateInfoActivity extends AppCompatActivity implements View.OnClic
             e.printStackTrace();
         }
 
-        btnUpdateBefore=(Button)findViewById(R.id.btnUpdateBefore);
+        btnUpdateBefore= (ImageButton) findViewById(R.id.btnBeforeUpdate);
         btnUpdateInfo=(Button)findViewById(R.id.btnUpdateInfo);
 
         updatePW=(TextInputEditText)findViewById(R.id.updatePW);

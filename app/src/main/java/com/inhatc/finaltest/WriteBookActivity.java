@@ -11,6 +11,7 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
@@ -27,6 +28,7 @@ public class WriteBookActivity extends AppCompatActivity implements View.OnClick
 
     // 버튼
     private Button btnInsert;
+    private ImageButton btnInsertBefore;
 
     // String 변수
     private String title;
@@ -50,7 +52,9 @@ public class WriteBookActivity extends AppCompatActivity implements View.OnClick
         txtContent=(TextInputEditText)findViewById(R.id.insertContent);
 
         btnInsert=(Button)findViewById(R.id.btnInsert);
+        btnInsertBefore=(ImageButton)findViewById(R.id.btnBeforeInsert);
 
+        btnInsertBefore.setOnClickListener(this);
         btnInsert.setOnClickListener(this);
 
         Intent callIntent= getIntent();
@@ -90,7 +94,7 @@ public class WriteBookActivity extends AppCompatActivity implements View.OnClick
                 // 디비 생성
                 try {
                     myDB = this.openOrCreateDatabase(DBNAME, MODE_PRIVATE, null);
-                    Toast.makeText(this, "데이터베이스 열림", Toast.LENGTH_LONG).show();
+                   // Toast.makeText(this, "데이터베이스 열림", Toast.LENGTH_LONG).show();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -102,7 +106,7 @@ public class WriteBookActivity extends AppCompatActivity implements View.OnClick
                             "title text not null," +
                             "content text not null," +
                             "email text not null);");
-                    Toast.makeText(this, "book 테이블 생성", Toast.LENGTH_LONG).show();
+                   // Toast.makeText(this, "book 테이블 생성", Toast.LENGTH_LONG).show();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -126,13 +130,15 @@ public class WriteBookActivity extends AppCompatActivity implements View.OnClick
                 }
 
                 // 회원가입 완료 Toast 띄어주기
-                Toast.makeText(this, "회원가입 완료되었습니다", Toast.LENGTH_LONG).show();
+                //Toast.makeText(this, "회원가입 완료되었습니다", Toast.LENGTH_LONG).show();
 
                 Intent readIntent=new Intent(WriteBookActivity.this,ReadBookActivity.class);
                 readIntent.putExtra("email",email);
                 startActivity(readIntent);
                 finish();
             }
+        }else if(v==btnInsertBefore){
+            finish();
         }
     }
 }
