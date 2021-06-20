@@ -24,6 +24,10 @@
     <style name="Theme.FinalTest.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <!--카드뷰 추가-->
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowTranslucentStatus">true</item>
     </style>
 
     <style name="Theme.FinalTest.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />

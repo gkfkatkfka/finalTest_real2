@@ -89,7 +89,7 @@ public class JoinActivity extends AppCompatActivity implements View.OnClickListe
         btnJoinBefore.setOnClickListener(this);
 
         /*DB 관련*/
-// 디비 생성
+        // 디비 생성
         try {
             myDB = this.openOrCreateDatabase(DBNAME, MODE_PRIVATE, null);
             //Toast.makeText(this, "데이터베이스 생성", Toast.LENGTH_LONG).show();
@@ -110,7 +110,7 @@ public class JoinActivity extends AppCompatActivity implements View.OnClickListe
         }
 
         /* 글씨가 입력 될 때마다 실행*/
-// 이메일 형식 검사(@ 확인)
+        // 이메일 형식 검사(@ 확인)
         joinEmail.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {

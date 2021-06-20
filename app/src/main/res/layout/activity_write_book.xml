@@ -43,6 +43,7 @@
         app:boxBackgroundColor="#FFFFFF"
         app:boxStrokeColor="#B58772"
         app:boxStrokeWidth="2dp"
+        app:counterEnabled="true"
         app:counterMaxLength="100"
         app:hintTextColor="#473F3B"
         app:layout_constraintBottom_toTopOf="@+id/btnInsert"
