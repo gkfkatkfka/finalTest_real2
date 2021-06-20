@@ -9,16 +9,16 @@
         <item name="colorSecondary">@color/teal_200</item>
         <item name="colorSecondaryVariant">@color/teal_700</item>
         <item name="colorOnSecondary">@color/black</item>
+
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">#FBD786</item>
+
         <!-- Customize your theme here. -->
         <!--위의 바 색깔 바꿔주는거-->
 
         <!--NoTitleBar-->
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-
-
     </style>
 
     <style name="Theme.FinalTest.NoActionBar">

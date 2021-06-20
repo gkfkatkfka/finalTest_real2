@@ -83,6 +83,9 @@ public class FragmentBook extends Fragment {
         adapter = new BookAdapter(getActivity(), list);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(adapter);
+        recyclerView.addItemDecoration(new MyItemDecoration());
+
+
 
         // 추가
         //생성

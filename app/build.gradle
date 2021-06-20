@@ -50,4 +50,6 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.0.0' // recyclerview
     implementation 'com.squareup.picasso:picasso:2.71828' // image
 
+    compile 'com.github.clans:fab:1.6.4'
+
 }
