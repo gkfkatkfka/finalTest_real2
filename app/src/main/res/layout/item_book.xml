@@ -1,8 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="10sp"
-    android:background="@drawable/listbox_style">
+    android:padding="10sp">
     <ImageView
         android:id="@+id/image"
         android:layout_width="70sp"
@@ -31,6 +30,7 @@
         android:layout_toRightOf="@id/image"
         android:fontFamily="@font/ng_regular"
         android:text="책가격"
-        android:textSize="15sp" />
+        android:textSize="15sp"
+        android:lineSpacingMultiplier="1.5" />
 
 </RelativeLayout>

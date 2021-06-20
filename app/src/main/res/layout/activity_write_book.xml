@@ -7,7 +7,7 @@
     tools:context=".WriteBookActivity">
 
     <ImageButton
-        android:id="@+id/btnJoinBefore"
+        android:id="@+id/btnBefore"
         android:layout_width="40dp"
         android:layout_height="31dp"
         android:layout_marginStart="16dp"
@@ -31,7 +31,7 @@
         android:textSize="50dp"
         android:text="독서록 쓰기"
         app:layout_constraintBottom_toTopOf="@+id/textInputLayoutTitle"
-        app:layout_constraintStart_toEndOf="@+id/btnJoinBefore"
+        app:layout_constraintStart_toEndOf="@+id/btnBefore"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout

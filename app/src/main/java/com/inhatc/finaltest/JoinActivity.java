@@ -13,11 +13,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -25,12 +23,6 @@ import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
-import com.google.firebase.database.ValueEventListener;
 
 
 public class JoinActivity extends AppCompatActivity implements View.OnClickListener {
@@ -69,7 +61,7 @@ public class JoinActivity extends AppCompatActivity implements View.OnClickListe
 
 
         /* 버튼 연결*/
-        btnJoinBefore = (ImageButton) findViewById(R.id.btnJoinBefore);
+        btnJoinBefore = (ImageButton) findViewById(R.id.btnBefore);
         btnResister = (Button) findViewById(R.id.btnResister);
 
 

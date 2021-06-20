@@ -21,10 +21,10 @@
         app:layout_constraintBottom_toTopOf="@+id/textInputLayout42"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btnJoinBefore" />
+        app:layout_constraintTop_toTopOf="@+id/btnBefore" />
 
     <ImageButton
-        android:id="@+id/btnJoinBefore"
+        android:id="@+id/btnBefore"
         android:layout_width="40dp"
         android:layout_height="31dp"
         android:layout_marginStart="16dp"
