@@ -5,5 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ReadBookActivity">
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ng_bold"
+        android:text="목록"
+        android:textSize="50dp"
+        tools:layout_editor_absoluteX="46dp"
+        tools:layout_editor_absoluteY="68dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listRead"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="#F1F0F0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

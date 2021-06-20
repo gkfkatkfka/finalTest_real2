@@ -86,10 +86,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent joinIntent = new Intent(MainActivity.this, JoinActivity.class);
             startActivity(joinIntent);
         } else if (v == btnLogin) { // login 화면
+
             email="gkfkatkfka@naver.com";
             Intent tabIntent = new Intent(MainActivity.this, TabActivity.class);
             tabIntent.putExtra("email", email);
             startActivity(tabIntent);
+
+
 /*
             check(email, pw);
             if(inputEmail.getError()==null&&inputPW.getError()==null){ // 공백이 없을 경우
@@ -106,8 +109,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     myDB.close();
                 }
             }
-*/
 
+*/
         }
     }
 

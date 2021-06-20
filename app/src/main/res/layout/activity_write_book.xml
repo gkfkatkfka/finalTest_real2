@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WriteBookActivity">
+
+    <ImageButton
+        android:id="@+id/btnJoinBefore"
+        android:layout_width="40dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="17dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/appName2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back"
+        app:tint="#655a3e" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginBottom="64dp"
+        android:fontFamily="@font/ng_bold"
+        android:textSize="50dp"
+        android:text="독서록 쓰기"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayoutTitle"
+        app:layout_constraintStart_toEndOf="@+id/btnJoinBefore"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutContent"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="306dp"
+        android:layout_height="324dp"
+        android:layout_marginBottom="17dp"
+        app:boxBackgroundColor="#FFFFFF"
+        app:boxStrokeColor="#B58772"
+        app:boxStrokeWidth="2dp"
+        app:counterMaxLength="100"
+        app:hintTextColor="#473F3B"
+        app:layout_constraintBottom_toTopOf="@+id/btnInsert"
+        app:layout_constraintEnd_toEndOf="@+id/btnInsert"
+        app:layout_constraintStart_toStartOf="@+id/btnInsert"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutTitle">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/insertContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="start"
+            android:hint="후기"
+            android:inputType="textMultiLine" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutTitle"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="307dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="11dp"
+        app:boxBackgroundColor="#FFFFFF"
+        app:boxStrokeColor="#B58772"
+        app:boxStrokeWidth="2dp"
+        app:hintTextColor="#473F3B"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayoutContent"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayoutContent"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayoutContent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/insertTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="책 이름" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnInsert"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="51dp"
+        android:layout_marginEnd="51dp"
+        android:layout_marginBottom="60dp"
+        android:layout_weight="1"
+        android:text="작성"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutContent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

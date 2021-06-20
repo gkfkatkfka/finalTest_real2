@@ -1,7 +1,6 @@
 package com.inhatc.finaltest;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
@@ -12,7 +11,6 @@ import android.widget.Toast;
 
 import com.github.clans.fab.FloatingActionButton;
 import com.github.clans.fab.FloatingActionMenu;
-import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
@@ -21,7 +19,7 @@ public class TabActivity extends AppCompatActivity{
     String email;
 
     private FloatingActionMenu fam;
-    private FloatingActionButton fabEdit,  fabAdd;
+    private FloatingActionButton fabRead,  fabWrite;
 
     private TextView txt;
     @Override
@@ -49,13 +47,13 @@ public class TabActivity extends AppCompatActivity{
 
         /*floating button*/
 
-        fabAdd = (FloatingActionButton) findViewById(R.id.fab2);
-        fabEdit = (FloatingActionButton) findViewById(R.id.fab1);
-        fam = (FloatingActionMenu) findViewById(R.id.fab_menu);
+        fabRead = (FloatingActionButton) findViewById(R.id.readTab);
+        fabWrite = (FloatingActionButton) findViewById(R.id.writeTab);
+        fam = (FloatingActionMenu) findViewById(R.id.fabMenu);
 
         //handling each floating action button clicked
-        fabEdit.setOnClickListener(onButtonClick());
-        fabAdd.setOnClickListener(onButtonClick());
+        fabRead.setOnClickListener(onButtonClick());
+        fabWrite.setOnClickListener(onButtonClick());
 
         fam.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,10 +72,14 @@ public class TabActivity extends AppCompatActivity{
         return new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (view == fabAdd) {
-                    showToast("Button Add clicked");
+                if (view == fabRead) {
+                    Intent readIntent=new Intent(TabActivity.this,ReadBookActivity.class);
+                    readIntent.putExtra("email",email);
+                    startActivity(readIntent);
                 } else {
-                    showToast("Button Edit clicked");
+                    Intent writeIntent=new Intent(TabActivity.this,WriteBookActivity.class);
+                    writeIntent.putExtra("email",email);
+                    startActivity(writeIntent);
                 }
                 fam.close(true);
             }

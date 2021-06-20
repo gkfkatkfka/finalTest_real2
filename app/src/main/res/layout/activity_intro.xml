@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/cafe24ssurroundair"
-        android:text="파인드북"
+        android:text="독서습관"
         android:textColor="#71644b"
         android:textSize="70dp"
         android:textStyle="bold"

@@ -18,8 +18,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FinalTest">
-        <activity android:name=".ReadBookActivity"></activity>
-        <!-- map -->
+        <activity android:name=".WriteBookActivity"></activity>
+        <activity android:name=".ReadBookActivity" /> <!-- map -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyAekfgpmB-SzFW8YhQ8LtThkdmbUMKnDZQ" />

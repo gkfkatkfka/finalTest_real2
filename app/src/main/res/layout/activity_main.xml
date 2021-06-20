@@ -14,7 +14,7 @@
         android:layout_marginTop="188dp"
         android:layout_marginBottom="196dp"
         android:fontFamily="@font/cafe24ssurroundair"
-        android:text="파인드북"
+        android:text="독서습관"
         android:textColor="#655a3e"
         android:textSize="70dp"
         android:textStyle="bold"
